@@ -23,7 +23,10 @@ export default {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [
+    './node_modules/mapbox-gl/dist/mapbox-gl.css',
+    './node_modules/@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css'
+  ],
   /*
   ** Plugins to load before mounting the App
   */
@@ -40,7 +43,15 @@ export default {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
+    '@nuxtjs/apollo'
   ],
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://covid19-graphql.now.sh/'
+      }
+    }
+  },
   /*
   ** Build configuration
   */

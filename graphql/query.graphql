@@ -1,0 +1,12 @@
+query getData {
+  countries {
+    name
+    mostRecent {
+      date
+      confirmed
+      deaths
+      recovered
+      growthRate
+    }
+  }
+}
