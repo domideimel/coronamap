@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <map/>
+  <div class="container">
+    <covid-19-map />
   </div>
 </template>
 
@@ -9,7 +9,23 @@
 
   export default {
     components: {
-      Map
+      'covid-19-map': Map
     }
   }
 </script>
+
+<style scoped>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
